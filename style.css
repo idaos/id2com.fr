@@ -139,3 +139,48 @@ html .footer .footer-content {
 .toTop {
   display: none!important;
 }
+/* Contact form */
+#section-contact form input,
+#section-contact form textarea {
+  background: #fff;
+  font-family: 'Montserrat';
+  border-radius: 5px;
+  margin-top: .2em;
+}
+#section-contact form textarea {
+  max-height: 8em;
+}
+#section-contact form input:focus,
+#section-contact form textarea:focus {
+  transition: none;
+  border: solid 2px #fb9178;
+}
+#section-contact form input[type="submit"] {
+  border: solid 2px rgba(0, 0, 0, 0) !important;
+  color: #fff!important;
+  background: #fb9178!important;
+  padding: .8em 1.6em;
+}
+#section-contact form input[type="submit"]:hover {
+  border: solid 2px #fb9178!important;
+  color: #fb9178!important;
+  background: #fff2ec!important;
+}
+#section-contact form p:nth-child(2),
+#section-contact form p:nth-child(3) {
+  width: calc(49.5%) !important;
+  float: left;
+}
+#section-contact form p:nth-child(2) {
+  margin-right: .5em!important;
+}
+#section-contact form p:nth-child(3) {
+  margin-left: .5em!important;
+}
+#section-contact form .wpcf7-response-output {
+  background: none;
+  padding: 0;
+  color: #fb9178!important;
+  border-radius: 5px;
+  border: none;
+}

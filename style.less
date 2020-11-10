@@ -160,3 +160,57 @@ html .footer .footer-content {
     display:none!important;
 }
 
+/* Contact form */
+#section-contact form{
+    input, 
+    textarea{
+        background: #fff;
+        font-family:'Montserrat';
+        border-radius: 5px;
+        margin-top:.2em;
+    }
+    textarea{
+        max-height:8em;
+    }
+    input:focus, 
+    textarea:focus{
+        transition:none;
+        border: solid 2px #fb9178;
+    }
+
+    input[type="submit"]{
+        border: solid 2px rgba(0,0,0,0) !important;
+        color:#fff!important;
+        background:#fb9178!important;
+        padding:.8em 1.6em;
+    }
+    input[type="submit"]:hover{
+        border:solid 2px #fb9178!important;
+        color:#fb9178!important;
+        background:#fff2ec!important;
+    }
+    p:nth-child(2),
+    p:nth-child(3){
+        width:calc(50% - .5em)!important;
+        float:left;
+    }
+    p:nth-child(2){
+        margin-right:.5em!important;
+    }
+    p:nth-child(3){
+        margin-left:.5em!important;
+    }
+    .wpcf7-response-output{
+        background:none;
+        padding:0;
+        color: #fb9178!important;
+        border-radius:5px;
+        border:none;
+    }
+}
+
+
+
+
+
+
