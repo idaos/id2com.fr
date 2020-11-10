@@ -168,7 +168,7 @@ html .footer .footer-content {
 }
 #section-contact form p:nth-child(2),
 #section-contact form p:nth-child(3) {
-  width: calc(49.5%) !important;
+  width: calc(50% - .5em) !important;
   float: left;
 }
 #section-contact form p:nth-child(2) {
