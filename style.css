@@ -81,6 +81,9 @@ html #section-accueil {
   height: 44px;
   margin-top: 10px;
 }
+#section-formation > div:nth-of-type(1) * {
+  text-align: right;
+}
 /* Bio */
 #section-bio * {
   overflow: visible!important;
@@ -184,6 +187,17 @@ html .footer .footer-content {
   border-radius: 5px;
   border: none;
 }
-#section-formation div:nth-child(1) * {
-  text-align: right;
+/* Divider */
+.bklyn-divider-style-20 {
+  max-width: 50px;
+  margin-top: -2em;
+}
+.bklyn-divider-style-20 span {
+  padding: 0;
+}
+.bklyn-divider-style-20 span:after {
+  background-image: none;
+  height: 2px;
+  margin-top: 0;
+  background: #fb9178!important;
 }
