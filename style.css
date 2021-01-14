@@ -85,7 +85,7 @@ h3,
 }
 /* Section offres */
 #section-offre h3 > span > strong {
-  font-weight: bolder;
+  font-weight: bolder!important;
   text-transform: uppercase;
 }
 /* Qualités */
@@ -154,89 +154,19 @@ html #section-accueil {
   font-size: 15px;
   line-height: 25px;
 }
-#section-bio * {
-  overflow: visible!important;
-}
-#section-bio .custom-radius img {
-  /*border-radius: 50px;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;*/
-  width: calc(100% - 30px);
-  box-shadow: 30px 30px 0 0 #ffd9d0 !important;
-}
-/* bio section */
 #section-bio-2 .wpb_content_element {
   margin: 0;
+  margin-bottom: 0!important;
 }
 #section-bio-2 img.wpb_content_element {
   box-shadow: 30px 30px 0 0 #fb9178 !important;
 }
-#section-bio .portrait-custom-size div a div {
-  position: relative;
-  width: 800px;
-  height: 1200px;
-}
-#section-bio .portrait-custom-size img {
-  position: absolute;
-}
 @media (max-width: 767px) {
-  #section-bio .portrait-custom-size img {
-    width: auto;
-    height: auto;
-    right: 0;
-    left: 0;
-    top: 0;
-    margin: auto;
-    position: relative;
-    display: inline-block;
+  #section-bio-2 h2 {
+    margin-top: 1em;
   }
-  #section-bio .portrait-custom-size div a div {
-    height: auto;
-    text-align: center;
-    width: 100%;
-  }
-  #section-bio .portrait-custom-size div a div:after {
-    content: none;
-  }
-}
-@media (min-width: 768px) {
-  #section-bio .portrait-custom-size img {
-    width: 250px;
-    height: 375px;
-    right: 60%;
-    top: 20%;
-  }
-}
-@media (min-width: 992px) {
-  #section-bio .portrait-custom-size img {
-    width: 350px;
-    height: auto;
-    right: 48%;
-    top: 20%;
-  }
-}
-@media (min-width: 1200px) {
-  #section-bio .portrait-custom-size img {
-    width: 400px;
-    height: auto;
-    right: 35%;
-    top: 17%;
-  }
-}
-@media (min-width: 1700px) {
-  #section-bio .portrait-custom-size img {
-    width: 600px;
-    height: auto;
-    right: 40%;
-    top: 5%;
-  }
-}
-@media (max-width: 844px) {
-  #section-bio img {
-    max-width: 300px;
-  }
-  #section-bio h2 {
-    margin-top: 1.5em;
+  #section-bio-2 img {
+    max-width: 400px;
   }
 }
 .bklyn-list li {
