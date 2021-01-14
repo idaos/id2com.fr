@@ -39,7 +39,7 @@ window.onload = function() {
         }
     }
 
-    jQuery('#section-offre h2 > span').each(function(){
+    jQuery('#section-offre h3 > span').each(function(){
         var me = jQuery(this);
         me.html( me.text().replace(/(^\w+)/,'<strong>$1</strong>') );
     });

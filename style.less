@@ -52,12 +52,6 @@ h3,
     width: 20%;
 }
 
-//#ut-header-primary-extra-module:before{
-//    content:"isaraison@id2com.fr";
-//    position: absolute;
-//    right: 45%;
-//    width: 120%;
-//}
 .ut-navigation-style-animation-line.ut-navigation-style-animation-line-top ul li .ut-main-navigation-link::after {
     top: 3em;
 }
@@ -121,7 +115,11 @@ h3,
         max-width: 100px;
     }
 }
-
+/* Section offres */
+#section-offre h3 > span > strong{
+    font-weight: bolder;
+    text-transform: uppercase;
+}
 
 /* Qualités */
 
@@ -220,6 +218,14 @@ html #section-accueil {
     width: ~"calc(100% - 30px)";
     box-shadow: 30px 30px 0 0 #ffd9d0 !important;
 
+}
+
+/* bio section */
+#section-bio-2 .wpb_content_element {
+  margin:0;
+}
+#section-bio-2 img.wpb_content_element {
+  box-shadow: 30px 30px 0 0 #fb9178 !important;
 }
 
 
@@ -436,4 +442,39 @@ html body .bklyn-divider-style-20 {
             background: #fb9178!important;
         }
     }
+}
+
+
+#header-section[data-style=default] #navigation.ut-horizontal-navigation.ut-navigation-centered, #header-section[data-style=style-2] #navigation.ut-horizontal-navigation {
+    float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    left: 30px;
+}
+
+
+/* Section convictions */
+
+#section-conviction {
+    border-bottom-width: 1px !important;
+    background: #f7f8fa url(http://id2com.idaos.com/wp-content/uploads/2020/10/boisai-b_25.jpg?id=2575) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    border-bottom-color: #dddddd !important;
+    padding-top: 20px;
+}
+
+
+/* Testimonials section */
+.wpb_wrapper .bklyn-single-testimonial .ut-st-subtitle {
+	font-size:1em;
+	font-style:initial;
+}
+.wpb_wrapper .bklyn-single-testimonial .ut-st-name {
+	color:#000;
 }
