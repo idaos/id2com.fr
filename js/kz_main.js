@@ -21,15 +21,20 @@ window.onload = function() {
 					  dots:false,
 					  nav:false,
 					  autoplay:true,
-					  autoplayTimeout:3040,
+					  autoplayTimeout:0,
 					  autoplaySpeed:3000,
 					  lazyLoad : true,
+                      onTranslated:next,
 					  responsive : {
 					    768 : {
-						  items : 5,
+						  items : 5
 						}
 					  }
 					});
+                    
+                    function next(){
+                        owl.trigger('next.owl.carousel', 3000);
+                    }
 			}
 		  }
 		}

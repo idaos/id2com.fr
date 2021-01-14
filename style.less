@@ -11,16 +11,26 @@ Template: brooklyn
 :root { --primary-color: #ffb4a2; } 
 :root { --secondary-color: #FFE5D9; } 
 
+
 /* Fonts */
+
 [class^="ut-service"],
 .wpb_text_column{
     font-family:"Montserrat";
 }
+p, #navigation, h3, .ut-st-name{
+    color:black;
+}
+
 
 /* Carousel */
+
 .owl-stage{
     transition-timing-function: linear!important;
 }
+
+
+
 
 /* Header */
 
@@ -42,7 +52,7 @@ Template: brooklyn
 }
 
 .ut-horizontal-navigation.ut-navigation-style-animation-line-top ul li a.ut-main-navigation-link::after, .ut-horizontal-navigation.ut-navigation-style-animation-line-bottom ul li a.ut-main-navigation-link::after {
-    background: var(--primary-color);
+    background: var(--primary-color)!important;
 }
 
 #header-section{
@@ -56,19 +66,96 @@ Template: brooklyn
 .ha-header-front{
     mix-blend-mode:multiply;
 }
-
-/* Offre */
-#section-offre img{
-    max-width:100px;
+#header-section #navigation.ut-horizontal-navigation a{
+    font-size:14px;
+    font-family: 'Montserrat';
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+#header-section #navigation.ut-horizontal-navigation a:hover{
+    color:#ff6b46!important;
 }
 
+.ut-header-primary-extra-module{
+    display:none;
+}
+
+#navigation {
+    width: 85%;
+}
+
+.ut-horizontal-navigation.ut-navigation-style-animation-line-top ul li a.ut-main-navigation-link::after{
+    background: #ffb4a2;
+}
+@media (max-width: 1024px){
+    .site-logo img {
+        max-height: 60px!important;
+    }
+
+}
+
+
+/* Offre */
+
+#section-offre{
+
+    img{
+        max-width:100px;
+    }
+}
+
+
+/* Qualités */
+
+#section-qualites{
+    h3{
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+
 /* Heading */
+
 html #section-accueil {
     background-position: bottom !important;
 }
 
-/* Services */
+@media(min-width:1200px) {
+    #section-accueil{
+        padding-top:2.5em;
+    }
+    #header-section{
+        background-color: rgba(255,255,255,.0)!important;
+        background: rgba(0,0,0,0);
+    }
 
+    #main-content{
+        margin-top: -10em;
+    }
+    .h2-custom-spacing{
+        margin-bottom: 1em;
+        margin-top: 2.5em;
+    }
+}
+@media (max-width: 844px){
+
+    #section-accueil:after, #section-conviction:after{
+        content:'';
+        position:absolute;
+        width:100%;
+        height:100%;
+        background:rgba(255,255,255,.7);
+        top:0;
+        z-index:0;
+    }
+    #section-accueil > div, #section-conviction > div{
+        z-index:1;
+    }
+}
+
+
+/* Services */
 
 #primary .entry-content section:nth-of-type(3) .ut-service-icon{
     /*border: solid 3px #b9965d;*/
@@ -91,7 +178,9 @@ html #section-accueil {
 }
 
 
+
 /* Bio */
+
 #section-bio *{
     overflow:visible!important;
 }
@@ -103,11 +192,88 @@ html #section-accueil {
     box-shadow: 30px 30px 0 0 #ffd9d0 !important;
 }
 
+
+#section-bio .portrait-custom-size div a div{
+
+    position:relative;
+    width:800px;
+    height:1200px;
+}
+#section-bio .portrait-custom-size img{
+    position:absolute;
+}
+
+@media(max-width:767px){
+    #section-bio .portrait-custom-size img{
+        width:auto;
+        height:auto;
+        right:0;
+        left:0;
+        top:0;
+        margin:auto;
+        position:relative;
+        display:inline-block;
+    }
+    #section-bio .portrait-custom-size div a div{
+        height:auto;
+        text-align:center;
+        width:100%;
+    }
+    #section-bio .portrait-custom-size div a div:after{
+        content:none;
+    }
+}
+@media(min-width:768px){
+    #section-bio .portrait-custom-size img{
+        width:250px;
+        height:375px;
+        right:60%;
+        top:20%;
+    }
+}
+@media(min-width:992px){
+    #section-bio .portrait-custom-size img{
+        width:450px;
+        height:675px;
+        right:48%;
+        top:20%;
+    }
+}
+@media(min-width:1200px){
+    #section-bio .portrait-custom-size img{
+        width:500px;
+        height:750px;
+        right:35%;
+        top:17%;
+    }
+}
+
+@media(min-width:1700px){
+    #section-bio .portrait-custom-size img{
+        width:700px;
+        height:1050px;
+        right:40%;
+        top:5%;
+    }
+}
+
+@media (max-width: 844px){
+
+    #section-bio img{
+        max-width:300px;
+    }
+    #section-bio h2{
+        margin-top:1.5em;
+    }
+}
+
 .bklyn-list li{
     margin-top: 1.2em;
 }
 
+
 /* Quote */
+
 #section-temoignage{
 }
 .bklyn-single-testimonial{
@@ -125,6 +291,7 @@ html #section-accueil {
     font-style: italic;
     color: #8c8c8c;
 }
+
 
 /* Refs */
 
@@ -145,8 +312,9 @@ html #section-accueil {
 }
 
 html .bklyn-overlay {
-    background-color: rgba(256,256,256,1) !important;
+    background-color: #f9f9f9 !important;
 }
+
 
 /* Pre-loader */
 
@@ -154,17 +322,20 @@ html .bklyn-overlay {
     display:none!important;
 }
 
+
 /* Footer */
 
 html .footer .footer-content { 
-    background: rgba(255,242,236,1);
+    background: rgba(255,255,255,1);
 }
 
 .toTop{
     display:none!important;
 }
 
+
 /* Contact form */
+
 #section-contact form{
     input, 
     textarea{
@@ -213,7 +384,9 @@ html .footer .footer-content {
     }
 }
 
+
 /* Divider */
+
 html body .bklyn-divider-style-20 {
     max-width: 50px!important;
     margin-top: -2em!important;
