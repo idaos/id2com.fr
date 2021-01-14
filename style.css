@@ -145,6 +145,10 @@ html #section-accueil {
   text-align: right;
 }
 /* Bio */
+.txt-bio {
+  font-size: 15px;
+  line-height: 25px;
+}
 #section-bio * {
   overflow: visible!important;
 }
@@ -193,24 +197,24 @@ html #section-accueil {
 }
 @media (min-width: 992px) {
   #section-bio .portrait-custom-size img {
-    width: 450px;
-    height: 675px;
+    width: 350px;
+    height: auto;
     right: 48%;
     top: 20%;
   }
 }
 @media (min-width: 1200px) {
   #section-bio .portrait-custom-size img {
-    width: 500px;
-    height: 750px;
+    width: 400px;
+    height: auto;
     right: 35%;
     top: 17%;
   }
 }
 @media (min-width: 1700px) {
   #section-bio .portrait-custom-size img {
-    width: 700px;
-    height: 1050px;
+    width: 600px;
+    height: auto;
     right: 40%;
     top: 5%;
   }
