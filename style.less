@@ -16,6 +16,9 @@ Template: brooklyn
     --secondary-color: #FFE5D9;
 }
 
+::selection {
+    background: #ff8989!important;
+}
 
 /* Fonts */
 
@@ -29,6 +32,18 @@ p,
 h3,
 .ut-st-name {
     color: black;
+}
+
+/* Divider */
+
+@media (max-width: 767px){
+    .bklyn-title-divider {
+        display:none;
+    }
+}
+
+html body .bklyn-divider-style-20 {
+    margin-bottom:1.5em !important;	
 }
 
 
@@ -70,7 +85,7 @@ h3,
 #section-accueil *,
 #section-approche * {
     text-align: left !important;
-	top: -4px;
+    top: -4px;
 }
 
 .ha-header-front {
@@ -106,7 +121,24 @@ h3,
     }
 
 }
-
+#header-section[data-style=default] #navigation.ut-horizontal-navigation.ut-navigation-centered, #header-section[data-style=style-2] #navigation.ut-horizontal-navigation {
+    float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    left: 30px;
+}
+@media(max-width:767px){
+    #section-accueil h2{
+        font-size: 35px!important;
+    }
+    #section-accueil h1{
+        font-size: 26px!important;
+    }
+}
 
 /* Offre */
 
@@ -116,10 +148,79 @@ h3,
         max-width: 100px;
     }
 }
-/* Section offres */
+#section-offre h3 > span{
+    font-weight:inherit!important;
+}
 #section-offre h3 > span > strong{
     font-weight: bolder!important;
-    text-transform: uppercase;
+}
+
+#section-offre > div:nth-child(3){
+    margin:0;
+}
+
+@media(max-width:767px){
+
+    #section-offre h2{
+        margin-bottom: -1em !important;
+    }
+    #section-offre h3{
+        font-weight: 500;
+    }
+    #section-offre h3 > span{
+        font-size: 24px;
+        font-weight: bolder;
+    }
+}
+
+
+/* Section Offre : fonds de couleur alternés */
+
+#section-offre h2{
+    margin-bottom:2em;
+}
+
+#section-offre .ut-first-row .vc_col-sm-6:nth-child(1) .wpb_wrapper,
+#section-offre > div:not(.ut-first-row) .vc_col-sm-6:nth-child(2) .wpb_wrapper{
+    background:#f9f9f9;
+    outline: solid 1.35em #f9f9f9;
+}
+#section-offre > div:not(.ut-first-row) .vc_col-sm-6:nth-child(2) .wpb_wrapper{
+    margin:0!important;
+}
+
+#section-offre .vc_col-sm-6 .wpb_wrapper{
+    padding:1em 2em;
+    padding-top: 2em;
+    @media(max-width:767px){
+        padding: 0;
+        padding-top: 2em;
+    }
+}
+#section-offre > div:nth-child(2){
+    margin:0;
+}
+#section-offre > div:nth-child(3){
+    margin:0;
+}
+#section-offre .wpb_text_column > div{
+    padding:0!important;
+} 
+
+
+@media(max-width:767px){
+
+    #section-offre .ut-first-row .vc_col-sm-6:nth-child(1) .wpb_wrapper{
+        background:#fff;
+        outline: none;
+    }
+    #section-offre .ut-first-row .vc_col-sm-6:nth-child(2) .wpb_wrapper{
+        background:#f9f9f9;
+        outline: solid 1.35em #f9f9f9;
+    }
+    #section-formation{
+        margin:0;
+    }
 }
 
 /* Qualités */
@@ -131,6 +232,36 @@ h3,
     }
 }
 
+#section-qualites > div > div, #section-qualites > div{
+    margin-top:0;
+}
+
+[class^="offre-item-"]{
+    opacity: .8;
+}
+@media(max-width:767px){
+    #section-qualites{
+
+        .offre-item-1 img{
+            margin-right:-13px;
+        }
+        .offre-item-2 img{
+            margin-right:-24px;
+        }
+        .offre-item-3 img{
+            margin-right:-20px;
+        }
+        .offre-item-4 img{
+            margin-right:-12px;
+        }
+        .offre-item-5 img{
+            margin-right:-20px;
+        }
+        .offre-item-6 img{
+            margin-right:-12px;
+        }
+    }
+}
 
 /* Heading */
 
@@ -156,6 +287,31 @@ html #section-accueil {
     }
 }
 
+/* Section convictions */
+
+#section-conviction p, #section-conviction h2{
+    text-align:right;
+}
+@media (max-width: 767px){
+    #ut-sitebody #section-conviction{
+        background-position: 20%!important;
+    }
+    #section-conviction p, #section-conviction h2{
+        text-align:left;
+    }
+}
+/* Section convictions */
+
+#section-conviction {
+    border-bottom-width: 1px !important;
+    background: #f7f8fa url(http://id2com.idaos.com/wp-content/uploads/2020/10/boisai-b_25.jpg?id=2575) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    border-bottom-color: #dddddd !important;
+    padding-top: 20px;
+}
+
 @media (max-width: 844px) {
 
     #section-accueil:after,
@@ -173,6 +329,7 @@ html #section-accueil {
         z-index: 1;
     }
 }
+
 
 
 /* Services */
@@ -198,7 +355,11 @@ html #section-accueil {
 #section-formation > div:nth-of-type(1) * {
     text-align: right;
 }
-
+#section-formation{
+  margin-top:0;
+    padding-top: 5em!important;
+    padding-bottom: 2em!important;
+}
 
 
 /* Bio */
@@ -214,9 +375,9 @@ html #section-accueil {
 }
 
 #section-bio-2 .custom-radius img{
-  margin:2em!important;
-  box-shadow: 30px 30px 0 0 #ffcbbf !important;
-  
+    margin:2em!important;
+    box-shadow: 30px 30px 0 0 #ffcbbf !important;
+
 }
 
 @media(max-width:767px){
@@ -232,10 +393,20 @@ html #section-accueil {
     margin-top: 1.2em;
 }
 
+@media(max-width:767px){
+    #section-bio-2 .custom-radius img {
+        max-width: 90%;
+        box-shadow: 10px 10px 0 0 #ffcbbf !important;
+        margin: 0!important;
+    }
+
+    #section-bio-2 .ut-animated-image-zoom{
+        overflow:visible;
+    }
+}
+
 
 /* Quote */
-
-#section-temoignage {}
 
 .bklyn-single-testimonial {
     padding: .5em 0;
@@ -249,10 +420,51 @@ html #section-accueil {
 }
 
 .ut-st-name {
-    font-weight: bold !important;
-    font-style: italic;
-    color: #8c8c8c;
+    font-style: normal;
+    color:#000;
 }
+.ut-st {
+    color:#000;
+}
+.wpb_wrapper .bklyn-single-testimonial .ut-st-subtitle {
+    font-size: .9em!important;
+    font-weight: 600!important;
+    margin-top: .5em!important;
+}
+
+#section-temoignage{
+    padding-top: 0 !important;
+    padding-bottom: 1em !important;
+}
+#section-ref > div{
+    padding: 0;
+    padding-bottom: 0!important;
+}
+
+.testimonial-item .wpb_wrapper .wpb_content_element:first-child{
+    margin-bottom:.5em;
+}
+.testimonial-item .wpb_wrapper .wpb_content_element:nth-child(2){
+    margin:0;
+}
+.testimonial-item .wpb_wrapper .wpb_content_element:last-child{
+    margin-top:.5em;
+}
+
+@media(max-width:767px){
+    .quotation-mark-close,
+    .testimonial-item .wpb_wrapper .wpb_content_element:last-child{
+        display:none;   
+    }
+
+    .testimonial-item:nth-child(even){
+        padding: 1em;
+        margin: 2em 0;
+    }
+}
+
+
+
 
 
 /* Refs */
@@ -365,37 +577,17 @@ html body .bklyn-divider-style-20 {
     }
 }
 
+/* Spacing */
 
-#header-section[data-style=default] #navigation.ut-horizontal-navigation.ut-navigation-centered, #header-section[data-style=style-2] #navigation.ut-horizontal-navigation {
-    float: left;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    left: 30px;
+#section-qualites,
+#section-bio-2,
+#section-contact > div,
+#section-ref > div:first-child,{
+    padding-top: 4em !important; 
+    padding-bottom: 3.2em !important;
 }
 
 
-/* Section convictions */
-
-#section-conviction {
-    border-bottom-width: 1px !important;
-    background: #f7f8fa url(http://id2com.idaos.com/wp-content/uploads/2020/10/boisai-b_25.jpg?id=2575) !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    border-bottom-color: #dddddd !important;
-    padding-top: 20px;
-}
 
 
-/* Testimonials section */
-.wpb_wrapper .bklyn-single-testimonial .ut-st-subtitle {
-    font-size:1em;
-    font-style:initial;
-}
-.wpb_wrapper .bklyn-single-testimonial .ut-st-name {
-    color:#000;
-}
+
