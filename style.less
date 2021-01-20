@@ -57,7 +57,6 @@ html body .bklyn-divider-style-20 {
 
 
 /* Header */
-
 #navigation {
     justify-content: flex-start !important;
     width: 65%;
@@ -87,8 +86,11 @@ html body .bklyn-divider-style-20 {
     text-align: left !important;
     top: -4px;
 }
+#section-accueil *{
+    top: 12px;
+}
 
-.ha-header-front {
+.ha-header-front, .multiply {
     mix-blend-mode: multiply;
 }
 
@@ -138,6 +140,23 @@ html body .bklyn-divider-style-20 {
     #section-accueil h1{
         font-size: 26px!important;
     }
+}    
+// contact btn
+#menu-main > li:last-child > a{
+  background:#ffbfb0; /* #ffa894; */
+  line-height:40px;
+  padding: 0 1em;
+  margin-top:39px;
+  border-radius:3px;
+  color: #fff;
+  transition: all .3s;
+}
+#menu-main > li:last-child > a:hover {
+  background: #ffa894; 
+}
+#menu-main > li:last-child > a:hover > span,
+#menu-main > li:last-child > .selected > span{
+  color:#fff!important;
 }
 
 /* Offre */
@@ -154,7 +173,11 @@ html body .bklyn-divider-style-20 {
 #section-offre h3 > span > strong{
     font-weight: bolder!important;
 }
-
+#section-offre h3 > span > strong {
+  color:#fff;
+    box-shadow: #ffbfb0 0px -50px 0px inset;
+  padding:.0 .4em;
+}
 #section-offre > div:nth-child(3){
     margin:0;
 }
@@ -268,7 +291,16 @@ html body .bklyn-divider-style-20 {
 html #section-accueil {
     background-position: bottom !important;
 }
-
+#section-accueil h2{
+    margin-bottom:25px;
+}
+#section-accueil .wpb_content_element h4{
+    margin-top:40px;
+}
+#section-accueil .wpb_content_element:last-child h4{
+    margin-top:-30px;
+    text-align:right!important;
+}
 @media(min-width:1200px) {
     #section-accueil {
         padding-top: 2.5em;
@@ -356,7 +388,7 @@ html #section-accueil {
     text-align: right;
 }
 #section-formation{
-  margin-top:0;
+    margin-top:0;
     padding-top: 5em!important;
     padding-bottom: 2em!important;
 }
@@ -429,6 +461,7 @@ html #section-accueil {
 .wpb_wrapper .bklyn-single-testimonial .ut-st-subtitle {
     font-size: .9em!important;
     font-weight: 600!important;
+    font-style: normal!important;
     margin-top: .5em!important;
 }
 
@@ -561,6 +594,25 @@ html .footer .footer-content {
 }
 
 
+/* Section partenaires */
+
+#section-sponsor {
+    img{
+        opacity: .7;
+    }
+    .link-sponsor{
+        margin-bottom: 0!important;
+        a{
+            text-decoration:none!important;
+            margin-top: -3em;
+            &:hover{
+                color:#ff8989!important;
+            }
+        }
+    }
+}
+
+
 /* Divider */
 
 html body .bklyn-divider-style-20 {
@@ -581,13 +633,15 @@ html body .bklyn-divider-style-20 {
 
 #section-qualites,
 #section-bio-2,
-#section-contact > div,
+#section-contact > div:first-child,
 #section-ref > div:first-child,{
     padding-top: 4em !important; 
     padding-bottom: 3.2em !important;
 }
-
-
+#section-sponsor > div:first-child{   
+    padding-bottom: 0!important;
+    padding-top: 4em!important;
+}
 
 
 
