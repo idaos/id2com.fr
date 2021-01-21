@@ -87,9 +87,13 @@ html body .bklyn-divider-style-20 {
     top: -4px;
 }
 #section-accueil *{
-    top: 12px;
+    top: 20px;
 }
-
+@media (max-width: 767px){
+    #section-accueil *{
+        top: 0px;
+    }
+}
 .ha-header-front, .multiply {
     mix-blend-mode: multiply;
 }
@@ -143,20 +147,21 @@ html body .bklyn-divider-style-20 {
 }    
 // contact btn
 #menu-main > li:last-child > a{
-  background:#ffbfb0; /* #ffa894; */
-  line-height:40px;
-  padding: 0 1em;
-  margin-top:39px;
-  border-radius:3px;
-  color: #fff;
-  transition: all .3s;
+    background:#ffbfb0; /* #ffa894; */
+    line-height:40px;
+    padding: 0 1em;
+    margin-top:39px;
+    border-radius:3px;
+    color: #fff;
+    transition: all .3s;
+    margin-left: 5em;
 }
 #menu-main > li:last-child > a:hover {
-  background: #ffa894; 
+    background: #ffa894; 
 }
 #menu-main > li:last-child > a:hover > span,
 #menu-main > li:last-child > .selected > span{
-  color:#fff!important;
+    color:#fff!important;
 }
 
 /* Offre */
@@ -174,9 +179,9 @@ html body .bklyn-divider-style-20 {
     font-weight: bolder!important;
 }
 #section-offre h3 > span > strong {
-  color:#fff;
+    color:#fff;
     box-shadow: #ffbfb0 0px -50px 0px inset;
-  padding:.0 .4em;
+    padding:.0 .4em;
 }
 #section-offre > div:nth-child(3){
     margin:0;
@@ -598,7 +603,9 @@ html .footer .footer-content {
 
 #section-sponsor {
     img{
-        opacity: .7;
+        mix-blend-mode: multiply;
+        max-width: 180px;
+        margin-top: .8em;
     }
     .link-sponsor{
         margin-bottom: 0!important;
@@ -642,6 +649,6 @@ html body .bklyn-divider-style-20 {
     padding-bottom: 0!important;
     padding-top: 4em!important;
 }
-
-
-
+#section-accueil > div:first-child{   
+    overflow: visible;
+}
