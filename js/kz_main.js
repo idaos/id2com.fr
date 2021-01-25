@@ -22,9 +22,7 @@ jQuery( document ).ready(function() {
     var owl = jQuery('#section-ref .owl-carousel');
 
     owl.on('initialized.owl.carousel', function(event){ 
-        console.log( 'Owl is loaded!' );
         to = setTimeout( function() {
-            console.log( 'Initializing Owl with custom parameters!' );
             reinitCarousel();
         }, 800);
     });
@@ -71,6 +69,21 @@ jQuery( document ).ready(function() {
         me.html( me.text().replace(/(^\w+)/,'<strong>$1</strong>') );
     });
 
+    
+    // Prevent SPAM in contact forms if User has not scrolled (prevent bot form submit)
+    // ------------------------
+    userHasScrolled = false;
+    jQuery(window).one('scroll',function() {
+        console.log('User has Scrolled');
+        userHasScrolled = true;
+        jQuery( ".validation-area textarea" ).html('humanDetected')
+    });
+    jQuery( ".wpcf7-form" ).submit(function( event ) {
+        if(!userHasScrolled){
+            event.preventDefault();
+        }
+    });
+    
 });
 
 

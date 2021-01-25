@@ -500,6 +500,9 @@ html .footer .footer-content {
 form > p:nth-child(4) {
   display: none;
 }
+.validation-area {
+  display: none;
+}
 /* Section partenaires */
 #section-sponsor img {
   mix-blend-mode: multiply;
