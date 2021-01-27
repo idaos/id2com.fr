@@ -74,7 +74,7 @@ jQuery( document ).ready(function() {
     // ------------------------
     userHasScrolled = false;
     jQuery(window).one('scroll',function() {
-        console.log('User has Scrolled');
+
         userHasScrolled = true;
         jQuery( ".validation-area textarea" ).html('humanDetected')
     });
